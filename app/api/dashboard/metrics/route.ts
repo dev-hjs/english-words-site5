@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server'
 import prisma from '@/lib/prisma'
 
+// Force this route to be dynamic (don't pre-render at build time)
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   try {
     // 전체 통계
